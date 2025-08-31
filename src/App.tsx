@@ -5,9 +5,10 @@ function App() {
   return (
     <>
       <Button
-        label={'Kliknij'}
+        label={'klikaj'}
         onClick={() => alert('Kliknięto')}
         disabled={false}
+        variant="danger"
       />
     </>
   );
