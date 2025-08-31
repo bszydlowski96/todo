@@ -8,7 +8,8 @@ function App() {
         label={'klikaj'}
         onClick={() => alert('Kliknięto')}
         disabled={false}
-        variant="danger"
+        variant="primary"
+        size="lg"
       />
     </>
   );
