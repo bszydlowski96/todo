@@ -1,0 +1,21 @@
+$color-primary: #2563eb;
+$color-primary-hover: #1d4ed8;
+$color-text-dark: #111827;
+$color-text-light: #ffffff;
+$radius: 0.5rem;
+
+/*Button*/
+$primary-background-color: #ba32af;
+$secondary-background-color: #3f878c;
+$danger-background-color: #de3a28;
+
+$size-sm: 18px;
+$size-md: 24px;
+$size-lg: 30px;
+
+$button-radius: 12px;
+
+@mixin focus-ring {
+  outline: 3px solid #0ea5e9;
+  outline-offset: 2px;
+}
