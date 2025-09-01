@@ -13,18 +13,14 @@ const dirname =
 export default defineConfig({
   plugins: [react()],
   css: {
-    modules: {
-      localsConvention: 'camelCase',
-    },
+    modules: { localsConvention: 'camelCase' },
   },
   test: {
     projects: [
       {
         extends: true,
         plugins: [
-          storybookTest({
-            configDir: path.join(dirname, '.storybook'),
-          }),
+          storybookTest({ configDir: path.join(dirname, '.storybook') }),
         ],
         test: {
           name: 'storybook',
@@ -32,13 +28,17 @@ export default defineConfig({
             enabled: true,
             headless: true,
             provider: 'playwright',
-            instances: [
-              {
-                browser: 'chromium',
-              },
-            ],
+            instances: [{ browser: 'chromium' }],
           },
           setupFiles: ['.storybook/vitest.setup.ts'],
+        },
+      },
+      {
+        test: {
+          name: 'unit',
+          environment: 'jsdom',
+          globals: true,
+          setupFiles: './src/setupTests.ts',
         },
       },
     ],

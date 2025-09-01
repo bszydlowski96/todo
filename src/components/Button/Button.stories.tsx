@@ -22,7 +22,7 @@ const meta: Meta<typeof Button> = {
   args: {
     label: 'Click me',
     variant: 'primary',
-    size: 'md',
+    size: 'lg',
     disabled: false,
     type: 'button',
   },
@@ -38,21 +38,3 @@ export const Primary: Story = {};
 export const Secondary: Story = { args: { variant: 'secondary' } };
 export const Danger: Story = { args: { variant: 'danger' } };
 export const Disabled: Story = { args: { disabled: true } };
-
-export const Sizes: Story = {
-  render: (args) => (
-    <div
-      style={{
-        display: 'grid',
-        gridAutoFlow: 'column',
-        gap: 12,
-        alignItems: 'start',
-        justifyContent: 'start',
-      }}
-    >
-      <Button {...args} size="sm" label="Small" />
-      <Button {...args} size="md" label="Medium" />
-      <Button {...args} size="lg" label="Large" />
-    </div>
-  ),
-};
