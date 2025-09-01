@@ -1,5 +1,5 @@
 import type { ButtonTypes } from './Button.types';
-import { stylesForButton, buttonSize } from './Button.consts';
+import { stylesForButton, buttonSize, baseClass } from './Button.consts';
 
 const Button = ({
   label,
@@ -9,7 +9,7 @@ const Button = ({
   size = 'md',
   type = 'button',
 }: ButtonTypes) => {
-  const buttonClasses = `${stylesForButton[variant]} ${buttonSize[size]}`;
+  const buttonClasses = `${baseClass} ${stylesForButton[variant]} ${buttonSize[size]}`;
   return (
     <button
       onClick={onClick}
