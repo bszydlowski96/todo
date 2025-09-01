@@ -1,8 +1,8 @@
 export type ButtonTypes = {
   label: string;
   onClick?: () => void;
-  disabled: boolean;
+  disabled?: boolean;
   variant?: 'primary' | 'secondary' | 'danger';
   size?: 'sm' | 'md' | 'lg';
-  type?: 'button' | 'submit';
+  type?: 'button' | 'submit' | 'reset';
 };

@@ -4,7 +4,6 @@ $color-text-dark: #111827;
 $color-text-light: #ffffff;
 $radius: 0.5rem;
 
-/*Button*/
 $primary-background-color: #ba32af;
 $secondary-background-color: #3f878c;
 $danger-background-color: #de3a28;
@@ -18,4 +17,32 @@ $button-radius: 12px;
 @mixin focus-ring {
   outline: 3px solid #0ea5e9;
   outline-offset: 2px;
+}
+
+@mixin button-base($bg, $textColor: $color-text-light) {
+  background-color: $bg;
+  color: $textColor;
+  border-radius: $button-radius;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.12s ease, opacity 0.12s ease;
+  &:hover {
+    opacity: 0.85;
+  }
+  &:focus-visible {
+    @include focus-ring;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-size($height, $px, $py, $fontSize) {
+  font-size: $fontSize;
+  line-height: 1;
+  min-height: $height;
+  padding: $py $px;
 }

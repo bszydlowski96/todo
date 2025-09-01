@@ -1,37 +1,37 @@
 @use '../../styles/tokens' as *;
 
-.primary {
-  background-color: $primary-background-color;
+.root {
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: $button-radius;
-  &:hover {
-    opacity: 0.8;
-  }
+  cursor: pointer;
+}
+
+.primary {
+  @include button-base($primary-background-color);
 }
 
 .secondary {
-  background-color: $secondary-background-color;
-  border-radius: $button-radius;
-  &:hover {
-    opacity: 0.8;
-  }
+  @include button-base($secondary-background-color);
 }
 
 .danger {
-  background-color: $danger-background-color;
-  border-radius: $button-radius;
-  &:hover {
-    opacity: 0.8;
-  }
+  @include button-base($danger-background-color);
 }
 
-.size-sm {
-  font-size: $size-sm;
+.sizeSm {
+  @include button-size(32px, 12px, 6px, $size-sm);
 }
 
-.size-md {
-  font-size: $size-md;
+.sizeMd {
+  @include button-size(40px, 14px, 8px, $size-md);
 }
 
-.size-lg {
-  font-size: $size-lg;
+.sizeLg {
+  @include button-size(48px, 16px, 10px, $size-lg);
 }
